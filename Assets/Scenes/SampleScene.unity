@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 351325321}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1171,9 +1171,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1484843881}
   - component: {fileID: 1484843880}
-  - component: {fileID: 1484843879}
   - component: {fileID: 1484843878}
   - component: {fileID: 1484843882}
+  - component: {fileID: 1484843879}
   m_Layer: 0
   m_Name: New Sprite
   m_TagString: enemy
@@ -1201,9 +1201,9 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &1484843879
-BoxCollider2D:
+  m_Constraints: 4
+--- !u!70 &1484843879
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1216,18 +1216,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.32}
-    newSize: {x: 0.16, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 0.16, y: 0.32}
-  m_EdgeRadius: 0
+  m_Direction: 0
 --- !u!212 &1484843880
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1303,6 +1293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  player: {fileID: 0}
+  health: 100
 --- !u!1 &2036761935
 GameObject:
   m_ObjectHideFlags: 0
